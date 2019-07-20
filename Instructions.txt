@@ -7,17 +7,24 @@ This includes use of third-party libraries and UI components.
 If you do use code from other sources, please give credit to the original author in the comments and do not attempt to pass the code off as your own.
 While it is acceptable to use other people's code with permission and with citations, an over-reliance on third-party code may affect your overall score.
 
+Running this app:
+
+(1) Ensure you have node.js installed on your PC: https://nodejs.org/en/download/
+(2) Ensure you have angular cli installed on your PC: https://cli.angular.io/
+(3) Open a powershell in the project's folder and run 'npm install' followed by 'ng serve'
+(4) Navigate to localhost:4200 in your browser of choice to view the app running
+
 Overview:
 
 You are required to design a web app which allows the user to generate a shopping list.
 
 The app is comprised of two lists: 
-    (1) the 'Current' list -  the list of things the user wants to buy
-    (2) the 'Previous' list - the list of items the user has added to previous lists
+    (1) the 'Current' list -  the list of items the user wants to buy
+    (2) the 'Previous' list - the list of items the user has added to previous lists in the past
 
 The user should be able to add new items to the 'Current' list, as well as adding previously-used items from the 'Previous' list. 
-It should be possible to move items back and forth between lists, as well as editing items. 
-The user should also be able to order the 'Current' shopping list manually, using arrows buttons in the user interface.
+It should be possible to move items back and forth between lists, as well as editing and deleting items. 
+The user should also be able to order the items in the 'Current' list manually, using arrows buttons in the user interface.
 
 At Nomuda we use a ticketing system to manage our workload. 'Stories' are created and assigned to developers. 
 These stories are broken down into sub-tickets, each ticket describing a specific bit of functionality.
@@ -83,12 +90,13 @@ PRIORITY: URGENT
 It should be possible to delete permanently an item from the 'Previous' List.
 NOTE: the UI element for this functionality is not included in the mock-up.
 NOTE: It is not expected that changes persist after the browser is closed or the app is restarted.
-EXTRA CREDIT: the user should be warned via an appropriate interface that the item will be permanently deleted.
+EXTRA CREDIT: the user should be warned via an appropriate UI interface that the item will be permanently deleted.
 
 Ticket 8 - Implement functionality for manually re-ordering 'Current' list
 PRIORITY: URGENT
 
-The user should be able to order the items on the 'Current' list using the 'Up' and 'Down' arrows
+The user should be able to order the items on the 'Current' list using the 'Up' and 'Down' arrows.
+The user should click on an item to select it and move it up and down the list by clicking the appropriate button.
 
 Ticket 9 - Flag 'High Priority' items on the 'Current' List
 PRIORITY: MINOR
@@ -110,7 +118,7 @@ PRIORITY: MINOR
 Make the app look beautiful regardless of whether it is viewed on a desktop or mobile platform.
 In mobile mode, optimise UI elements for the finger-presses instead of mouse clicks.
 
-Ticket 11 - Format the link at the top of the page into an elegant navigation banner
+Ticket 11 - Format the list of links at the top of the page into an elegant navigation banner
 PRIORITY: MINOR
 
 Turn the nav element in app.component.html into a functional navigation banner.
