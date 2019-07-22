@@ -36,6 +36,8 @@ If you wish to demonstrate your skills further by taking on more of the 'Minor' 
 However, you will be judged on the quality of the work, not the quantity, so do not pressure yourself to complete all the tickets.
 This is your opportunity to show us what you can do, so choose a 'Minor' priority ticket or tickets that best demonstrate your skillset.
 
+There is no time limit on this test. Take as long as you feel you need, but please keep a log of how long this task took you.
+
 (Please note: This project does not require a database to be set up, so please hard-code items for the 'Previous' list or use 
 some of form of local storage.)
 
@@ -98,7 +100,14 @@ PRIORITY: URGENT
 The user should be able to order the items on the 'Current' list using the 'Up' and 'Down' arrows.
 The user should click on an item to select it and move it up and down the list by clicking the appropriate button.
 
-Ticket 9 - Flag 'High Priority' items on the 'Current' List
+Ticket 9 - Validation to prevent duplicate items being added to either list
+PRIORITY: MINOR
+
+The user should not be able to add multiple items with the same name.
+Add client-side validation to the app to prevent this.
+Give useful feedback to the user when they are prevented from adding a duplicate item.
+
+Ticket 10 - Flag 'High Priority' items on the 'Current' List
 PRIORITY: MINOR
 
 The user should be able to set items in the 'Current' list as high priority. 
@@ -106,19 +115,19 @@ The 'high priority' items should be flagged with a red exclamation mark.
 These items should be 'stickied' to the top of the 'Current' list. 
 It should not be possible for items which are not high priority to appear higher in the list than high priority items.
 
-Ticket 9 - Save and Load data user the browser's local storage
+Ticket 11 - Save and Load data user the browser's local storage
 PRIORITY: MINOR
 
 Allow the changes made by the user to persist once the page is reloaded by using the browser's local storage.
 See: https://www.w3schools.com/html/html5_webstorage.asp
 
-Ticket 10 - Responsive UI - Allow the app to scale flexibly when viewed on desktop or mobile
+Ticket 12 - Responsive UI - Allow the app to scale flexibly when viewed on desktop or mobile
 PRIORITY: MINOR
 
 Make the app look beautiful regardless of whether it is viewed on a desktop or mobile platform.
 In mobile mode, optimise UI elements for the finger-presses instead of mouse clicks.
 
-Ticket 11 - Format the list of links at the top of the page into an elegant navigation banner
+Ticket 13 - Format the list of links at the top of the page into an elegant navigation banner
 PRIORITY: MINOR
 
 Turn the nav element in app.component.html into a functional navigation banner.
@@ -126,16 +135,8 @@ Make it look as pretty as possible while maintaining functionality.
 See: https://getbootstrap.com/docs/4.0/components/navbar/ for examples (or use your own)
 NOTE: The links in the banner do not have to work and you do not need to create pages for them. 
 
-Ticket 12 - Validation to prevent duplicate items being added to either list
-PRIORITY: MINOR
-
-The user should not be able to add multiple items with the same name.
-Add client-side validation to the app to prevent this.
-Give useful feedback to the user when they are prevented from adding a duplicate item.
-
-Ticket 13 - Allow the user to export the 'Current' list into another format
+Ticket 14 - Allow the user to export the 'Current' list into another format
 PRIORITY: MINOR
 
 The user will want to use the shopping list in the real world. 
 Allow the user to export the list into another format, e.g. .csv, .txt, .pdf.
-
