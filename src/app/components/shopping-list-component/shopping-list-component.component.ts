@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularWaitBarrier } from 'blocking-proxy/built/lib/angular_wait_barrier';
 
 @Component({
   selector: 'app-shopping-list-component',
@@ -6,47 +7,85 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shopping-list-component.component.css']
 })
 export class ShoppingListComponentComponent implements OnInit {
-  item = '';
-  constructor() {
-  }
+  
 
-  ngOnInit() {
-  }
-    onClickMe(event: any) {
-    console.log('adding item');
+  ngOnInit() {    
+  }  
 
-    this.getitems()
+  headMessage : string;
+  selectedRow : Number;
+  setClickedRow : Function;
+  setnewitem: Function;
+  setClickedPrevRow:Function;
+  setpreviousitem:Function;
+  setpreviousitemtonew:Function;
+  items : [{
+      item: string,
+  }]; 
+  previousitems : [{
+    item: string,
+}]; 
 
-    const num1 = ((document.getElementById('item') as HTMLInputElement).value);
-    let ammount = 1;
-    interface Useritems {
-      item: string;
-      qty: number;
-    }
-    let items: Useritems = { item: num1, qty: ammount};
+constructor() {
+  this.headMessage = "Please click below rows !!";
 
-  let newitems= localStorage.getItem('items');
+      this.items = [{
+          item : "apple"            
+      }];
+      
+      this.previousitems = [{
+        item : "apple"            
+    }             
+    ];
 
-      const itemhold = JSON.stringify(items)
-
-    console.log(num1);
-    localStorage.setItem('items', itemhold);
-    //this.reloadtable();
-    }
-
-    getitems(){
-      const items:any = localStorage.getItem('items');
-      console.log(items);
-      console.log(typeof items)
-    }
-    reloadtable(){
-      let table = document.getElementById('loaded-list');
-        const items:any =localStorage.getItem('items');
-        console.log(items);
-      items.num.forEach(function (value) {
-        console.log(value);
-          });
+      this.setClickedRow = function(index){
+          this.selectedRow = index;
+          this.selectedPrevRow = null;
       }
+     this.setClickedPrevRow = function(index){
+        this.selectedPrevRow = index;
+        this.selectedRow = null;
+     }
+
+      this.setnewitem = function(index){
+        var   newitem = ((document.getElementById("input") as HTMLInputElement).value);
+        this.items.push({item:newitem})
+        
+        console.log('test')
+    } 
+
+    this.setpreviousitem = function(index){
+  
+      var   newitem = this.items[index];
+      
+      console.log(typeof newitem);
+      console.log(index);
+      this.items.splice(index,1);
+
+      this.previousitems.push(newitem);
+      
+      console.log('test');
+  } 
+    
+  this.setpreviousitemtonew = function(index){
+  
+    var   newitem = this.items[index];
+    
+    console.log( newitem);
+    console.log(index);
+    this.previousitems.splice(index,1);
+
+    this.items.push(newitem);
+    
+    console.log('test');
+    } 
+
+
+    
+}
+
+
+   
 }
 
 
